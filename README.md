@@ -71,30 +71,11 @@
   - DATABASE_URL (e.g., sqlite:///./app.db for local dev; replace with Postgres or managed DB in prod)
   - MODEL_DIR (path to model artifacts, default `./models/saved_models/`)
 
-
-## Quick start (Windows)
-1. Create and activate virtual environment
-   - python -m venv .venv
-   - .venv\Scripts\activate
-
-2. Install requirements (add project requirements file if absent)
-   - pip install -r requirements.txt
-
-3. Set required environment variables
-   - set OPENAI_API_KEY=your_key_here
-   - set DATABASE_URL=sqlite:///./app.db   (or your preferred DB)
-
-4. Run backend (development)
-   - uvicorn backend.main:app --reload --port 8000
-
-5. Run UI (in a separate terminal)
-   - streamlit run ui/Home.py
-
 ## Quick start docker
 1. Build the image
    - docker compose build
 2. Run the containers
-   - docker compose up
+   - docker compose up -d
 3. Access the UI at http://localhost:8501 and the API docs at http://localhost:8000/docs
 
 
