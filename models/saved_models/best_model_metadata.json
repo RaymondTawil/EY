@@ -1,0 +1,90 @@
+{
+  "selected": "OptionA_recallAtK",
+  "review_k": 0.2,
+  "beta": 3,
+  "report": {
+    "name": "OptionA_recall@K",
+    "ROC_AUC": 0.7508995092713032,
+    "PR_AUC": 0.17471908851583187,
+    "Precision@0.5": 0.1404573028464769,
+    "Recall@0.5": 0.7008149010477299,
+    "F1@0.5": 0.23401360544217686,
+    "Confusion@0.5": [
+      [
+        7957,
+        3684
+      ],
+      [
+        257,
+        602
+      ]
+    ],
+    "Precision@top_20%": 0.17,
+    "Recall@top_20%": 0.4947613504074505,
+    "F1@top_20%": 0.25305150342363797,
+    "Threshold@top_20%": 0.6017189025878906
+  },
+  "feature_set": [
+    "loan_amnt",
+    "int_rate",
+    "fico_range_low",
+    "fico_range_high",
+    "annual_inc",
+    "dti",
+    "revol_util",
+    "emp_length_num",
+    "term_num",
+    "grade",
+    "sub_grade",
+    "home_ownership",
+    "verification_status",
+    "purpose"
+  ],
+  "numeric_columns": [
+    "loan_amnt",
+    "int_rate",
+    "fico_range_low",
+    "fico_range_high",
+    "annual_inc",
+    "dti",
+    "revol_util",
+    "emp_length_num",
+    "term_num"
+  ],
+  "categorical_columns": [
+    "grade",
+    "sub_grade",
+    "home_ownership",
+    "verification_status",
+    "purpose"
+  ],
+  "scale_pos_weight": 13.557453416149068,
+  "searchA_params": {
+    "clf__subsample": 1.0,
+    "clf__reg_lambda": 0.5,
+    "clf__reg_alpha": 0.5,
+    "clf__n_estimators": 600,
+    "clf__min_child_weight": 8,
+    "clf__max_depth": 3,
+    "clf__learning_rate": 0.06,
+    "clf__colsample_bytree": 0.7
+  },
+  "searchB_params": {
+    "clf__subsample": 1.0,
+    "clf__reg_lambda": 1.0,
+    "clf__reg_alpha": 1.0,
+    "clf__n_estimators": 400,
+    "clf__min_child_weight": 5,
+    "clf__max_depth": 3,
+    "clf__learning_rate": 0.05,
+    "clf__colsample_bytree": 0.7
+  },
+  "policy": {
+    "reject_top": 0.05,
+    "review_top": 0.15,
+    "thresholds": {
+      "thr_reject": 0.7334313988685608,
+      "thr_review": 0.632895827293396
+    }
+  }
+}

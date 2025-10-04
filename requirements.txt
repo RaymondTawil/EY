@@ -1,0 +1,17 @@
+pandas
+numpy
+statsmodels
+scikit-learn
+matplotlib
+seaborn
+shap
+xgboost
+fastapi
+uvicorn
+pydantic
+python-dotenv
+openai
+joblib
+requests
+streamlit
+sqlalchemy

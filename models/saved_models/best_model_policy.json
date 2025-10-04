@@ -1,0 +1,10 @@
+{
+  "model_name": "OptionA_recallAtK",
+  "saved_at": "2025-10-02T12:10:04Z",
+  "reject_top": 0.05,
+  "review_top": 0.15,
+  "thresholds": {
+    "thr_reject": 0.7334313988685608,
+    "thr_review": 0.632895827293396
+  }
+}

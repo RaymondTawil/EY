@@ -1,0 +1,30 @@
+version: "3"
+services:
+  api:
+    build: .
+    working_dir: /backend
+    ports: ["8000:8000"]
+    env_file: .env
+    command: uvicorn backend.main:app --host 0.0.0.0 --port 8000
+    volumes:
+      - ./:/backend
+
+  ui:
+    image: python:3.11-slim
+    working_dir: /ui
+    environment:
+      - API_BASE_URL=http://api:8000
+    volumes:
+      - ./ui:/ui
+      - ./ui/.streamlit:/ui/.streamlit:ro
+    command: >
+      bash -lc "
+        pip install -U pip &&
+        pip install streamlit requests altair &&
+        streamlit run Home.py --server.port 8501 --server.address 0.0.0.0
+      "
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+

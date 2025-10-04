@@ -1,0 +1,87 @@
+{
+  "selected": "Baseline",
+  "report": {
+    "top_5pct": {
+      "threshold": 0.6645270955957193,
+      "precision": 0.1984,
+      "recall": 0.14435389988358557,
+      "f1": 0.16711590296495957,
+      "confusion_matrix": [
+        [
+          11140,
+          501
+        ],
+        [
+          735,
+          124
+        ]
+      ]
+    },
+    "top_10pct": {
+      "threshold": 0.6645270955957193,
+      "precision": 0.1616,
+      "recall": 0.2351571594877765,
+      "f1": 0.19155998103366526,
+      "confusion_matrix": [
+        [
+          10593,
+          1048
+        ],
+        [
+          657,
+          202
+        ]
+      ]
+    },
+    "top_20pct": {
+      "threshold": 0.6173223395117136,
+      "precision": 0.1388,
+      "recall": 0.4039580908032596,
+      "f1": 0.20660910985412326,
+      "confusion_matrix": [
+        [
+          9488,
+          2153
+        ],
+        [
+          512,
+          347
+        ]
+      ]
+    }
+  },
+  "feature_set": [
+    "loan_amnt",
+    "int_rate",
+    "fico_range_low",
+    "fico_range_high",
+    "annual_inc",
+    "dti",
+    "revol_util",
+    "emp_length_num",
+    "term_num",
+    "grade",
+    "sub_grade",
+    "home_ownership",
+    "verification_status",
+    "purpose"
+  ],
+  "numeric_columns": [
+    "loan_amnt",
+    "int_rate",
+    "fico_range_low",
+    "fico_range_high",
+    "annual_inc",
+    "dti",
+    "revol_util",
+    "emp_length_num",
+    "term_num"
+  ],
+  "categorical_columns": [
+    "grade",
+    "sub_grade",
+    "home_ownership",
+    "verification_status",
+    "purpose"
+  ]
+}
