@@ -5,7 +5,7 @@ import requests
 import streamlit as st
 from pathlib import Path
 
-API_URL = os.getenv("API_URL", "http://localhost:8000")
+API_URL = os.getenv("API_URL", "http://api:8000")
 VER = "/v1"
 BASE = f"{API_URL}{VER}"
 JSON = {"Content-Type": "application/json"}
@@ -71,7 +71,7 @@ def get(path: str, timeout=30):
 logo_col, title_col = st.columns([1, 3])
 with logo_col:
     # Adjust path if needed (relative to this file)
-    show_logo_local("../data/ey.jpg", width=96)
+    show_logo_local("data/ey.jpg", width=96)
 with title_col:
     st.title("AI Credit Risk – MVP UI")
 

@@ -63,6 +63,15 @@
 - test/
   - api_test.py
 
+## ENV
+- Store sensitive info in environment variables or a `.env` file (not checked into source control).
+- Required:
+  - OPENAI_API_KEY (for LLM advice; optional, can be left unset)
+  - OPENAI_MODEL (e.g., gpt-40-mini; adjust as needed)
+  - DATABASE_URL (e.g., sqlite:///./app.db for local dev; replace with Postgres or managed DB in prod)
+  - MODEL_DIR (path to model artifacts, default `./models/saved_models/`)
+
+
 ## Quick start (Windows)
 1. Create and activate virtual environment
    - python -m venv .venv
@@ -120,3 +129,6 @@
 ### Longer term productization
 - A/B testing or online learning to compare models in production.
 - Human-in-the-loop workflows for reviewers with annotations that feed back into training data.
+- Client comms: email the client message directly (SMTP/API), attach a PDF summary.
+- Document intake: OCR and extraction (Tesseract/Azure/AWS Textract/GCP) to auto-fill fields from payslips, bank statements; LLM-based parsing to normalize values (guardrails required).
+- Identity & fraud checks: KYC/AML API integrations; device and behavioral signals.
